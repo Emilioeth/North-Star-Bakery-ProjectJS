@@ -118,6 +118,8 @@ function submitRequest(event) {
         firstInvalidField.focus();
         return;
     }
+    
+    status.textContent = "All fields are valid.";
 }
 
 function setupForm() {
