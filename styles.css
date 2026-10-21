@@ -1,0 +1,286 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #FFF8F0;
+    color: #30251F;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+header {
+    padding: 2rem 1rem;
+    background-color: #6B3E26;
+    color: #FFF8F0;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+    line-height: 1.2;
+}
+
+h1 {
+    margin: 0 0 1.5rem;
+    font-size: 2rem;
+}
+
+h2 {
+    margin: 0 0 1rem;
+    color: #6B3E26;
+    font-size: 1.6rem;
+}
+
+h3 {
+    margin: 1.5rem 0 0.5rem;
+    color: #6B3E26;
+    font-size: 1.2rem;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+a {
+    color: #6B3E26;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    text-decoration-thickness: 2px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    color: #FFF8F0;
+    text-decoration: none;
+}
+
+nav a:hover, nav a[aria-current="page"] {
+    background-color: #FFF8F0;
+    color: #6B3E26;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+section {
+    min-width: 0;
+    padding: 1.5rem;
+    border-radius: 6px;
+    background-color: #F2E5D5;
+}
+
+section > :last-child {
+    margin-bottom: 0;
+}
+
+main > p {
+    flex-basis: 100%;
+    margin: 0;
+}
+
+ul {
+    padding-left: 1.25rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+nav li {
+    margin: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+figure {
+    margin: 1.5rem 0 0;
+}
+
+figcaption {
+    font-size: 0.9rem;
+}
+
+audio {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+}
+
+address {
+    font-style: normal;
+}
+
+fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 1rem;
+    border: 1px solid #6B3E26;
+    border-radius: 4px;
+}
+
+legend, label {
+    font-weight: bold;
+}
+
+legend {
+    padding: 0 0.5rem;
+}
+
+input, select, textarea, button {
+    font: inherit;
+}
+
+input, select, textarea {
+    width: 100%;
+    min-width: 0;
+    margin-top: 0.4rem;
+    padding: 0.65rem;
+    border: 1px solid #6B3E26;
+    border-radius: 4px;
+    background-color: #FFF8F0;
+    color: #30251F;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 0.75rem 1.25rem;
+    border: 0;
+    border-radius: 4px;
+    background-color: #6B3E26;
+    color: #FFF8F0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #30251F;
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible, audio:focus-visible {
+    outline: 3px solid #6B3E26;
+    outline-offset: 4px;
+}
+
+nav a:focus-visible {
+    outline-color: #FFF8F0;
+}
+
+footer {
+    margin-top: auto;
+    padding: 1.5rem 1rem;
+    background-color: #6B3E26;
+    color: #FFF8F0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (min-width: 800px) {
+    header {
+        padding: 3rem 2rem 2rem;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: 3rem 2rem;
+    }
+
+    section {
+        flex: 1 1 calc(50% - 0.75rem);
+        padding: 2rem;
+    }
+
+    .product-layout section {
+        flex: 1 1 calc(33.333% - 1rem);
+        padding: 1.5rem;
+    }
+
+    .contact-layout section:first-child {
+        flex: 1;
+    }
+
+    .contact-layout section:last-child {
+        flex: 2;
+    }
+}
+
+.favorite-button {
+    display: block;
+    margin: 0.75rem 0 1.25rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+}
+
+.favorite-button[aria-pressed="true"] {
+    background-color: #30251F;
+}
+
+.product-layout #favorites {
+    flex-basis: 100%;
+}
+
+.field-error {
+    display: block;
+    margin-top: 0.4rem;
+    color: #6B3E26;
+    font-weight: bold;
+}
+
+[aria-invalid="true"] {
+    border: 2px solid #6B3E26;
+}
+
+#form-status:not(:empty) {
+    margin-top: 1rem;
+    font-weight: bold;
+}

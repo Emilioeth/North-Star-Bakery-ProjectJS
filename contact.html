@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Star Bakery | Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Contact North Star Bakery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-layout">
+        <section>
+            <h2>Visit the Bakery</h2>
+            <address>123 Main Street, Minneapolis, MN</address>
+            <h3>Hours of Operation</h3>
+            <ul>
+                <li>Monday through Friday: 7 a.m. to 5 p.m.</li>
+                <li>Saturday: 7 a.m. to 5 p.m.</li>
+                <li>Sunday: Closed</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Questions and Preorder Requests</h2>
+            <p>Tell us what you would like to order or ask a question about our products. For preorders, include the item names, quantities, and your preferred pickup date.</p>
+            <p>Fields marked required must be completed. This is a practice form for a class project; it does not send requests to a bakery.</p>
+
+            <form id="request-form" action="contact.html" method="get">
+                <fieldset>
+                    <legend>Your Request</legend>
+
+                    <p>
+                        <label for="name">Name (required)</label><br>
+                        <input type="text" id="name" aria-describedby="name-error" name="name" autocomplete="name" required>
+                        <span class="field-error" id="name-error" aria-live="polite"></span>
+                    </p>
+
+                    <p>
+                        <label for="email">Email (required)</label><br>
+                        <input type="email" id="email" aria-describedby="email-error" name="email" autocomplete="email" required>
+                        <span class="field-error" id="email-error" aria-live="polite"></span>
+                    </p>
+
+                    <p>
+                        <label for="request-type">Request type (required)</label><br>
+                        <select id="request-type" aria-describedby="request-type-error" name="request-type" required>
+                            <option value="">Choose a request type</option>
+                            <option value="preorder">Preorder</option>
+                            <option value="question">General question</option>
+                        </select>
+                        <span class="field-error" id="request-type-error" aria-live="polite"></span>
+                    </p>
+
+                    <p>
+                        <label for="pickup-date">Preferred pickup date (for preorders)</label><br>
+                        <input type="date" id="pickup-date" name="pickup-date">
+                    </p>
+
+                    <p>
+                        <label for="details">Item details or question (required)</label><br>
+                        <textarea id="details" aria-describedby="details-error" name="details" rows="5" cols="30" required></textarea>
+                        <span class="field-error" id="details-error" aria-live="polite"></span>
+                    </p>
+
+                    <p>
+                        <label for="allergies">Allergy notes (optional)</label><br>
+                        <textarea id="allergies" name="allergies" rows="3" cols="30"></textarea>
+                    </p>
+
+                    <button type="submit">Submit Request</button>
+                </fieldset>
+                <p id="form-status" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026 North Star Bakery</p>
+    </footer>
+</body>
+</html>
+

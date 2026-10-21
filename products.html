@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Star Bakery | Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Our Products</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" aria-current="page">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="product-layout">
+        <p>From a loaf for dinner to a cake for a birthday, North Star Bakery has something to share. Here are some of the things we bake.</p>
+
+        <section>
+            <h2>Breads</h2>
+            <p>Our breads are baked fresh and sold by the loaf. Prices range from $5 to $9.</p>
+            <ul>
+                <li id="signature-loaf"><strong>Signature Loaf:</strong> A crusty loaf with a soft center, great with soup or toasted with butter.</li>
+                <li id="whole-wheat"><strong>Whole Wheat Bread:</strong> A hearty everyday bread for sandwiches and toast.</li>
+                <li id="baguette"><strong>Baguette:</strong> A long, crisp loaf to serve alongside a meal.</li>
+            </ul>
+            <figure>
+                <img src="media/bakery-signature-loaf_c.png" alt="Round, flour-dusted loaf with a scored crust resting on a cloth" width="300">
+                <figcaption>Our Signature Loaf, ready to take home and share.</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Pastries and Cookies</h2>
+            <p>Pick up a treat for breakfast or an afternoon break. Prices range from $2 to $5 each.</p>
+            <ul>
+                <li id="croissant"><strong>Butter Croissant:</strong> A flaky pastry with a buttery flavor.</li>
+                <li id="cinnamon-roll"><strong>Cinnamon Roll:</strong> Soft dough rolled with cinnamon sugar and topped with icing.</li>
+                <li id="cookie"><strong>Chocolate Chip Cookie:</strong> A classic cookie filled with chocolate chips.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Cakes</h2>
+            <p>Celebrate birthdays, family gatherings, and other special occasions with a cake. Prices range from $25 to $60, depending on size and decorations.</p>
+            <ul>
+                <li id="vanilla-cake"><strong>Vanilla Cake:</strong> Vanilla layers with buttercream frosting.</li>
+                <li id="chocolate-cake"><strong>Chocolate Cake:</strong> Chocolate layers with chocolate frosting.</li>
+                <li id="carrot-cake"><strong>Carrot Cake:</strong> A spiced carrot cake with cream cheese frosting.</li>
+            </ul>
+            <p><a href="contact.html">Send us a preorder request</a> with your preferred cake, pickup date, and any decoration ideas.</p>
+        </section>
+        <section id="favorites" hidden>
+            <h2>Your Favorites</h2>
+            <p>Save items you would like to try or ask about in a preorder request. Your choices are remembered in this browser.</p>
+            <p id="favorites-status" role="status"></p>
+            <ul id="favorites-list"></ul>
+            <p><a href="contact.html">Ask about your favorite items</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026 North Star Bakery</p>
+    </footer>
+</body>
+</html>
+
